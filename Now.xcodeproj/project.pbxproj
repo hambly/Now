@@ -21,6 +21,8 @@
 		4D9E088318BE611900265349 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9E086218BE611900265349 /* UIKit.framework */; };
 		4D9E088B18BE611900265349 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E088918BE611900265349 /* InfoPlist.strings */; };
 		4D9E088D18BE611900265349 /* NowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E088C18BE611900265349 /* NowTests.m */; };
+		4DE59B5018C6A68300DBB86C /* now.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DE59B4F18C6A68300DBB86C /* now.png */; };
+		4DE59B5218C6A69100DBB86C /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DE59B5118C6A69100DBB86C /* appicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4D9E088818BE611900265349 /* NowTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NowTests-Info.plist"; sourceTree = "<group>"; };
 		4D9E088A18BE611900265349 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4D9E088C18BE611900265349 /* NowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NowTests.m; sourceTree = "<group>"; };
+		4DE59B4F18C6A68300DBB86C /* now.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = now.png; sourceTree = "<group>"; };
+		4DE59B5118C6A69100DBB86C /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				4D9E087618BE611900265349 /* NOWViewController.h */,
 				4D9E087718BE611900265349 /* NOWViewController.m */,
 				4D9E087918BE611900265349 /* Images.xcassets */,
+				4DE59B4F18C6A68300DBB86C /* now.png */,
+				4DE59B5118C6A69100DBB86C /* appicon.png */,
 				4D9E086518BE611900265349 /* Supporting Files */,
 			);
 			path = Now;
@@ -229,8 +235,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE59B5218C6A69100DBB86C /* appicon.png in Resources */,
 				4D9E087A18BE611900265349 /* Images.xcassets in Resources */,
 				4D9E087218BE611900265349 /* Main_iPhone.storyboard in Resources */,
+				4DE59B5018C6A68300DBB86C /* now.png in Resources */,
 				4D9E086918BE611900265349 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +327,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Mark Hambly (6BL9ZRFZJV)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Mark Hambly (6BL9ZRFZJV)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -463,6 +472,7 @@
 				4D9E089218BE611900265349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D9E089318BE611900265349 /* Build configuration list for PBXNativeTarget "NowTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +481,7 @@
 				4D9E089518BE611900265349 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
