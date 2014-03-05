@@ -131,7 +131,7 @@
         NSTimeZone *timeZone = [self timeZoneForHour:hour];
         NSLog(@"time zone is %@",timeZone.name);
         self.timeZoneSelectedLabel.text = [timeZone localizedName:NSTimeZoneNameStyleStandard locale:[NSLocale currentLocale]];
-        self.notesLabel.text = [self notesForHour:hour];
+        self.notesLabel.text = [NSString stringWithFormat:@"%@ %@",[self notesForHour:hour],[self regionsForTimeZone:timeZone]];
     }
     
 }
@@ -157,27 +157,81 @@
         newGMT -=24;
     
     return [NSTimeZone timeZoneForSecondsFromGMT:newGMT * 60 * 60];
-
     
 }
 
 - (NSString *)notesForHour:(int)hourSelected {
     if (hourSelected >= 9 && hourSelected < 17){
-        return @"It's business time.";
+        return @"It's business time:";
     } else if (hourSelected >=22 || hourSelected < 8){
-        return @"Rude to call.";
+        return @"Rude to call:";
     } else {
         return @"";
     }
     
 }
 
-- (NSString *)regionsForHour:(int)hourSelected {
-  
-    return @"";
+- (NSString *)regionsForTimeZone:(NSTimeZone *)timeZone {
+    switch ((int)([timeZone secondsFromGMT]/ 60 / 60)) {
+        case 0:
+            return @"UK, West Africa";
+        case 1:
+            return @"Most of Europe, Nigeria";
+        case 2:
+            return @"Eastern Europe, The Levant, Egypt";
+        case 3:
+            return @"Iraq, Iran (+.5), East Africa";
+        case 4:
+            return @"Moscow, Afghanistan";
+        case 5:
+            return @"Pakistan, India (+.5)";
+        case 6:
+            return @"";
+        case 7:
+            return @"Southeast Asia, Java";
+        case 8:
+            return @"China, Singapore, Philippines, Perth";
+        case 9:
+            return @"Japan, The Koreas";
+        case 10:
+            return @"Brisbane";
+        case 11:
+            return @"Most Australian Cities";
+        case 12:
+            return @"Kamchatka, New Zealand";
+        case 13:
+            return @"";
+        case -12:
+            return @"";
+        case -11:
+            return @"";
+        case -10:
+            return @"Hawaii";
+        case -9:
+            return @"Alaska";
+        case -8:
+            return @"US West Coast";
+        case -7:
+            return @"Denver";
+        case -6:
+            return @"Mexico, Chicago, Texas";
+        case -5:
+            return @"Eastern Canada, US East Coast";
+        case -4:
+            return @"Canadian Maritimes";
+        case -3:
+            return @"Coastal Brazil";
+        case -2:
+            return @"";
+        case -1:
+            return @"";
+            
+        default:
+            return @"";
+    }
 }
 
-- (NSString *)continentsForHour:(int)hourSelected {
+- (NSString *)continentsForTimeZone:(NSTimeZone *)timeZone {
     
     
     return @"";
