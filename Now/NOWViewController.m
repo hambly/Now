@@ -9,14 +9,15 @@
 #import "NOWViewController.h"
 
 @interface NOWViewController ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *localTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 @property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 @property (strong, nonatomic) NSURL *imageURL;
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSTimer *loadingTimer;
 @property (strong, nonatomic) NSString *loadingString;
-@property (weak, nonatomic) IBOutlet UILabel *loadingLabel;
 
 @end
 
@@ -44,18 +45,6 @@
         }
         [self stopLoadingTimer];
     }];
-//    
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    [[session dataTaskWithURL:self.imageURL
-//            completionHandler:^(NSData *data,
-//                                NSURLResponse *response,
-//                                NSError *error) {
-//                
-//                if (!error) {
-//                    [self.imageView setImage: [UIImage imageWithData:data]];
-//                }
-//                [self stopLoadingTimer];
-//            }] resume];
 }
 
 - (void) updateLocalTime {
