@@ -20,20 +20,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fi8-Xh-oTo">
-                                <rect key="frame" x="142" y="266" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </activityIndicatorView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oza-6m-x8d">
-                                <rect key="frame" x="20" y="527" width="215" height="24"/>
+                                <rect key="frame" x="20" y="527" width="183" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln4-Dr-cfo">
+                                <rect key="frame" x="225" y="528" width="75" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="tKS-Tc-jrX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-LN-QBG">
-                                <rect key="frame" x="243" y="524" width="57" height="30"/>
+                                <rect key="frame" x="243" y="525" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="6g3-qY-C3K"/>
@@ -50,22 +55,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="fi8-Xh-oTo" secondAttribute="centerY" id="3Jo-kk-8t5"/>
+                            <constraint firstAttribute="trailing" secondItem="ln4-Dr-cfo" secondAttribute="trailing" constant="20" id="3cf-i9-kQ9"/>
                             <constraint firstItem="hea-0f-m8y" firstAttribute="top" secondItem="DOu-iv-bxi" secondAttribute="bottom" id="3je-wx-WzP"/>
                             <constraint firstItem="DOu-iv-bxi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7gQ-Nj-fqh"/>
                             <constraint firstAttribute="trailing" secondItem="DOu-iv-bxi" secondAttribute="trailing" id="9Nh-Yz-RJI"/>
                             <constraint firstItem="oza-6m-x8d" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="BNM-V3-Nmf"/>
+                            <constraint firstItem="hea-0f-m8y" firstAttribute="top" secondItem="ln4-Dr-cfo" secondAttribute="bottom" constant="16" id="GLf-zY-SaM"/>
                             <constraint firstItem="hea-0f-m8y" firstAttribute="top" secondItem="oza-6m-x8d" secondAttribute="bottom" constant="17" id="KaT-AN-Kp4"/>
-                            <constraint firstItem="hea-0f-m8y" firstAttribute="top" secondItem="a8X-LN-QBG" secondAttribute="bottom" constant="14" id="TzA-0m-cho"/>
+                            <constraint firstItem="hea-0f-m8y" firstAttribute="top" secondItem="a8X-LN-QBG" secondAttribute="bottom" constant="13" id="TzA-0m-cho"/>
                             <constraint firstAttribute="trailing" secondItem="a8X-LN-QBG" secondAttribute="trailing" constant="20" id="WdE-Xb-77S"/>
                             <constraint firstItem="DOu-iv-bxi" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="XwN-dP-CbX"/>
-                            <constraint firstItem="a8X-LN-QBG" firstAttribute="leading" secondItem="oza-6m-x8d" secondAttribute="trailing" constant="8" id="cEk-vn-71q"/>
-                            <constraint firstAttribute="centerX" secondItem="fi8-Xh-oTo" secondAttribute="centerX" id="jlg-r3-DQm"/>
+                            <constraint firstItem="a8X-LN-QBG" firstAttribute="leading" secondItem="oza-6m-x8d" secondAttribute="trailing" constant="40" id="cEk-vn-71q"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="fi8-Xh-oTo" id="9N9-De-JJg"/>
                         <outlet property="imageView" destination="DOu-iv-bxi" id="8uW-2Y-HjG"/>
+                        <outlet property="loadingLabel" destination="ln4-Dr-cfo" id="q9n-n5-G7i"/>
                         <outlet property="localTimeLabel" destination="oza-6m-x8d" id="Jv0-gt-rye"/>
                         <outlet property="refreshButton" destination="a8X-LN-QBG" id="4Zb-rb-JBC"/>
                     </connections>
